@@ -1,0 +1,108 @@
+set shaders cell1
+set commands cell2
+set shader_exec false
+set index 506
+write -1 bank1 index
+read func bank1 index
+jump 5 equal func -1
+jump 66 equal func 15
+op add index index 1
+read arg1 bank1 index
+op add index index 1
+read arg2 bank1 index
+op add index index 1
+read arg3 bank1 index
+op add index index 1
+read arg4 bank1 index
+op add index index 1
+read arg5 bank1 index
+op add index index 1
+read arg6 bank1 index
+op add index index 1
+read @counter commands func
+draw clear arg1 arg2 arg3 255 0 0
+jump 5 equal shader_exec true
+jump 3 always func 1
+draw color arg1 arg2 arg3 arg4 0 0
+jump 5 equal shader_exec true
+jump 3 always func 1
+draw stroke arg1 arg2 arg3 arg4 0 0
+jump 5 equal shader_exec true
+jump 3 always func 1
+draw line arg1 arg2 arg3 arg4 0 0
+jump 5 equal shader_exec true
+jump 3 always func 1
+draw rect arg1 arg2 arg3 arg4 0 0
+jump 5 equal shader_exec true
+jump 3 always func 1
+draw lineRect arg1 arg2 arg3 arg4 0 0
+jump 5 equal shader_exec true
+jump 3 always func 1
+draw poly arg1 arg2 arg3 arg4 arg5 0
+jump 5 equal shader_exec true
+jump 3 always func 1
+draw linePoly arg1 arg2 arg3 arg4 arg5 0
+jump 5 equal shader_exec true
+jump 3 always func 1
+draw triangle arg1 arg2 arg3 arg4 arg5 arg6
+jump 5 equal shader_exec true
+jump 3 always func 1
+draw image arg1 arg2 arg3 arg4 arg5 arg6
+jump 5 equal shader_exec true
+jump 3 always func 1
+drawflush display1
+jump 5 equal shader_exec true
+jump 3 always func 1
+op mul shader_index arg1 1
+write arg2 shaders shader_index
+jump 5 equal shader_exec true
+jump 3 always func 1
+op mul shader_index arg1 1
+read index shaders shader_index
+set shader_exec true
+jump 5 always func 1
+set shader_exec false
+jump 3 always x false
+jump 3 always x false
+op add index index 1
+read func bank1 index
+op add index index 1
+read arg1 bank1 index
+jump 104 equal arg1 -513
+jump 74 greaterThanEq arg1 0
+op abs addr arg1 1
+read arg1 bank1 addr
+op add index index 1
+read arg2 bank1 index
+jump 104 equal arg2 -513
+jump 80 greaterThanEq arg2 0
+op abs addr arg2 1
+read arg2 bank1 addr
+op add index index 1
+read arg3 bank1 index
+jump 104 equal arg3 -513
+jump 86 greaterThanEq arg3 0
+op abs addr arg3 1
+read arg3 bank1 addr
+op add index index 1
+read arg4 bank1 index
+jump 104 equal arg4 -513
+jump 92 greaterThanEq arg4 0
+op abs addr arg4 1
+read arg4 bank1 addr
+op add index index 1
+read arg5 bank1 index
+jump 104 equal arg5 -513
+jump 98 greaterThanEq arg5 0
+op abs addr arg5 1
+read arg5 bank1 addr
+op add index index 1
+read arg6 bank1 index
+jump 104 equal arg6 -513
+jump 104 greaterThanEq arg6 0
+op abs addr arg6 1
+read arg6 bank1 addr
+op add index index 1
+jump 21 always x false
+end
+end

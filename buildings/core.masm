@@ -1,0 +1,280 @@
+set threads cell1
+set commands cell2
+set message message1
+set core bank1
+set thread 2
+write -1 threads thread
+read configuring threads 0
+jump 10 notEqual configuring thread
+write 1 threads 1
+jump 6 always configuring thread
+read i threads thread
+jump 6 equal i -1
+read c core i
+read @counter commands c
+op add i i 1
+read j core i
+op add i i 1
+read d core i
+write d core j
+jump 275 always c 2
+op add i i 1
+read j core i
+op add i i 1
+read j2 core i
+read d core j2
+write d core j
+jump 275 always c 2
+op add i i 1
+read j core i
+read d core j
+print d
+jump 275 always c 2
+printflush message
+jump 275 always c 2
+op add i i 1
+read o core i
+op add i i 1
+read a core i
+op add i i 1
+read b core i
+op add i i 1
+read r core i
+read o1 core o
+read a1 core a
+read b1 core b
+jump 48 notEqual o1 0
+op add r1 a1 b1
+jump 77 always o1 0
+jump 51 notEqual o1 1
+op sub r1 a1 b1
+jump 77 always o1 0
+jump 54 notEqual o1 2
+op mul r1 a1 b1
+jump 77 always o1 0
+jump 57 notEqual o1 3
+op div r1 a1 b1
+jump 77 always o1 0
+jump 60 notEqual o1 4
+op equal r1 a1 b1
+jump 77 always o1 0
+jump 63 notEqual o1 5
+op greaterThan r1 a1 b1
+jump 77 always o1 0
+jump 66 notEqual o1 6
+op lessThan r1 a1 b1
+jump 77 always o1 0
+jump 69 notEqual o1 7
+op notEqual r1 a1 b1
+jump 77 always o1 0
+jump 75 notEqual o1 8
+op sub rr1 b1 a1
+op rand r1 rr1 b1
+op add r1 r1 a1
+op idiv r1 r1 1
+jump 77 always o1 0
+jump 77 notEqual o1 9
+op mod r1 a1 b1
+write r1 core r
+jump 275 always c 2
+op add i i 1
+read p core i
+op add i i 1
+read j core i
+read v core j
+jump 275 equal v 0
+set i p
+jump 275 always c 2
+op add i i 1
+read j core i
+read h core j
+jump 93 notEqual h 0
+print "A"
+jump 87 always x false
+jump 96 notEqual h 1
+print "B"
+jump 87 always x false
+jump 99 notEqual h 2
+print "C"
+jump 87 always x false
+jump 102 notEqual h 3
+print "D"
+jump 87 always x false
+jump 105 notEqual h 4
+print "E"
+jump 87 always x false
+jump 108 notEqual h 5
+print "F"
+jump 87 always x false
+jump 111 notEqual h 6
+print "G"
+jump 87 always x false
+jump 114 notEqual h 7
+print "H"
+jump 87 always x false
+jump 117 notEqual h 8
+print "I"
+jump 87 always x false
+jump 120 notEqual h 9
+print "J"
+jump 87 always x false
+jump 123 notEqual h 10
+print "K"
+jump 87 always x false
+jump 126 notEqual h 11
+print "L"
+jump 87 always x false
+jump 129 notEqual h 12
+print "M"
+jump 87 always x false
+jump 132 notEqual h 13
+print "N"
+jump 87 always x false
+jump 135 notEqual h 14
+print "O"
+jump 87 always x false
+jump 138 notEqual h 15
+print "P"
+jump 87 always x false
+jump 141 notEqual h 16
+print "Q"
+jump 87 always x false
+jump 144 notEqual h 17
+print "R"
+jump 87 always x false
+jump 147 notEqual h 18
+print "S"
+jump 87 always x false
+jump 150 notEqual h 19
+print "T"
+jump 87 always x false
+jump 153 notEqual h 20
+print "U"
+jump 87 always x false
+jump 156 notEqual h 21
+print "V"
+jump 87 always x false
+jump 159 notEqual h 22
+print "W"
+jump 87 always x false
+jump 162 notEqual h 23
+print "X"
+jump 87 always x false
+jump 165 notEqual h 24
+print "Y"
+jump 87 always x false
+jump 168 notEqual h 25
+print "Z"
+jump 87 always x false
+jump 171 notEqual h 26
+print "\n"
+jump 87 always x false
+jump 174 notEqual h 27
+print " "
+jump 87 always x false
+jump 177 notEqual h 28
+print ","
+jump 87 always x false
+jump 180 notEqual h 29
+print "."
+jump 87 always x false
+jump 183 notEqual h 30
+print "="
+jump 87 always x false
+jump 275 equal h -1
+jump 87 always x false
+op add i i 1
+read j core i
+read t core j
+op add i i 1
+read j core i
+op add j j 1
+write j threads t
+jump 275 always c 2
+op add i i 1
+read aa core i
+read aav core aa
+op add i i 1
+read vv core i
+op add ra aav vv
+write ra core aa
+jump 275 always c 2
+op add i i 1
+read aa core i
+read aav core aa
+op add i i 1
+read vv core i
+op sub ra aav vv
+write ra core aa
+jump 275 always c 2
+op add i i 1
+read aa core i
+read aav core aa
+op add i i 1
+read vv core i
+op mul ra aav vv
+write ra core aa
+jump 275 always c 2
+op add i i 1
+read p core i
+op add i i 1
+read jj core i
+read jv core jj
+op add i i 1
+read js core i
+jump 275 equal js jv
+set i p
+jump 275 always c 2
+op add i i 1
+read p core i
+op add i i 1
+read jj core i
+read jv core jj
+op add i i 1
+read js core i
+jump 275 lessThanEq jv js
+set i p
+jump 275 always c 2
+op add i i 1
+read j core i
+op add i i 1
+read q1 core i
+op add i i 1
+read q2 core i
+op add i i 1
+read q3 core i
+op add i i 1
+op add i i 1
+read q4 core i
+write q1 core j
+op add j j 1
+write q2 core j
+op add j j 1
+write q3 core j
+op add j j 1
+write q4 core j
+jump 275 always c 2
+op add i i 1
+read ar core i
+op add i i 1
+read qr core i
+op rand rr ar br
+write rr core qr
+jump 275 always c 2
+op add i i 1
+read tri core i
+op add i i 1
+read trl core i
+read curconf threads 0
+jump 267 notEqual curconf -1
+write tri threads 0
+write 1234 threads 1
+read trw threads 1
+jump 271 notEqual trw 1
+write trl threads tri
+write -1 threads 0
+op add i i 1
+write i threads thread
+jump 6 always thread maxThreads
+end
+end
